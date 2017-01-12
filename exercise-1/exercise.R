@@ -1,27 +1,24 @@
-# Exercise 1: Creating and Indexing Vectors
+# Exercise 1: writing and executing functions
 
-# Create a vector `x` that has the values 10 through 20 in it (using the : operator)
+# Define a function `AddThree` that takes a single argument and
+# returns a value 3 greater than that input
+AddThree <- function(value) {
+  return(value + 3)
+}
 
+# Create a variable `ten` that is the result of passing 7 to your `AddThree` function
+ten <- AddThree(7)
 
-# Create a vector `y` that has the values 21 through 30 in it (using the seq() function)
+# Define a function `ImperialToMetric` that takes in two arguments: a number of feet
+# and a number of inches
+# The function should return the total length in meters
+# .3048 to feet
+ImperialToMetric <- function(feet, inches) {
+  to.inches <- feet * 12 + inches    # Converting imperial to metric
+  rate <- 0.3048 / 12
+  return(rate * to.inches)
+}
 
-
-# Create a vector `z` by combining the vectors `x` and `y`
-
-
-# Create a variable `w` that contains the 11th element in your vector `z`
-
-
-# Create a vector `q` that contains the second through the 5 elements of `z`
-
-
-# Create a variable `len` that is equal to the length of your vector `q`
-
-
-### Bonus ###
-
-# Create a vector `even` that holds the even numbers from 1 to 100
-
-
-# Using the `all()` function and `%%` (modulo) operator, confirm that all of the
-# numbers in your `even` vector are even
+# Create a variable `height.in.meters` by passing your height in imperial to the
+# `ImperialToMetric` function
+height.in.meters <- ImperialToMetric(6, 0)
